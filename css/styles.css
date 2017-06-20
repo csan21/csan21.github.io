@@ -30,7 +30,6 @@ body {
   margin-top: 20px;
 }
 
-
 #nav-links ul {
   list-style: none;
   display: block;
@@ -44,16 +43,16 @@ body {
 }
 
 a {
-  color: #000;
+  color: #000000;
   font-size: 14px;
   text-decoration: none;
 }
 
 a.active {
-  color: #FFF;
+  color: #FFFFFF;
   border-bottom: 2px solid white;
 }
 
 a:hover {
-  color: #FFF;
+  color: #FFFFFF;
 }
