@@ -1,5 +1,58 @@
 body {
+  font-family: helvetica;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+#navbar {
+  width: 100%;
+  background-color: lightslategrey;
+  height: 80px;
+  position: fixed;
+  margin-top: 0px;
+}
+
+#navbar-content {
+  margin: 0 auto;
+  width: 960px;
+}
+
+#name {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 30px;
+  font-family: cursive;
+}
+
+#nav-links {
+  float: right;
+  margin-top: 20px;
+}
+
+#nav-links ul {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+}
+
+#nav-links li {
+  margin-top: 9px;
+  float: left;
+  padding-left: 20px;
+}
+
+a {
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a.active {
+  color: #FFFFFF;
+  border-bottom: 2px solid white;
+}
+
+a:hover {
+  color: #FFFFFF;
 }
