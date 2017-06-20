@@ -11,7 +11,6 @@ body {
   height: 80px;
   position: fixed;
   margin-top: 0px;
-  opacity: 0.9;
 }
 
 #navbar-content {
@@ -33,28 +32,28 @@ body {
 
 
 #nav-links ul {
-	list-style: none;
-	display: block;
-	margin: 0 auto;
+  list-style: none;
+  display: block;
+  margin: 0 auto;
 }
 
 #nav-links li {
-	margin-top: 9px;
-	float: left;
-	padding-left: 20px;
+  margin-top: 9px;
+  float: left;
+  padding-left: 20px;
 }
 
 a {
-	color: #000;
-	font-size: 14px;
-	text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 a.active {
-	color: #FFF;
-	border-bottom: 2px solid white;
+  color: #FFF;
+  border-bottom: 2px solid white;
 }
 
 a:hover {
-	color: #FFF;
+  color: #FFF;
 }
