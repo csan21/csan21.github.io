@@ -78,6 +78,10 @@ a:hover {
   justify-content: space-around;
 }
 
+#about, #projects, #contact {
+  display: hidden;
+}
+
 .content {
   width: 40%;
   text-align: center;
