@@ -1,3 +1,11 @@
+html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   font-family: helvetica;
   margin: 0;
@@ -7,10 +15,11 @@ body {
 
 #navbar {
   width: 100%;
-  background-color: lightslategrey;
+  background-color: lightgrey;
   height: 80px;
   position: fixed;
   margin-top: 0px;
+  opacity: .6;
 }
 
 #navbar-content {
@@ -55,4 +64,21 @@ a.active {
 
 a:hover {
   color: #FFFFFF;
+}
+
+#about {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content {
+  width: 45%;
+  text-align: center;
 }
