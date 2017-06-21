@@ -1,5 +1,5 @@
 html {
-  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background: url(../img/desk.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: helvetica;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -15,11 +15,11 @@ body {
 
 #navbar {
   width: 100%;
-  background-color: lightgrey;
+  background-color: white;
   height: 80px;
   position: fixed;
   margin-top: 0px;
-  opacity: .6;
+  opacity: .8;
 }
 
 #navbar-content {
@@ -30,8 +30,13 @@ body {
 #name {
   margin-top: 20px;
   display: inline-block;
-  font-size: 30px;
-  font-family: cursive;
+  font-size: 34px;
+  font-family: 'Teko', sans-serif;
+  border-bottom: 1px solid black;
+}
+
+#last-name {
+  color: grey;
 }
 
 #nav-links {
@@ -58,12 +63,12 @@ a {
 }
 
 a.active {
-  color: #FFFFFF;
-  border-bottom: 2px solid white;
+  color: grey;
+  border-bottom: 1px dotted grey;
 }
 
 a:hover {
-  color: #FFFFFF;
+  color: grey;
 }
 
 #main {
@@ -71,6 +76,7 @@ a:hover {
   height: 400px;
   margin: 0 auto;
   padding-top: 100px;
+  color: white;
 }
 
 .container {
