@@ -6,8 +6,9 @@ html {
   background-size: cover;
 }
 
-body {
-  font-family: 'Roboto Condensed', sans-serif;
+body, p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -30,13 +31,18 @@ body {
 #name {
   margin-top: 20px;
   display: inline-block;
-  font-size: 34px;
+  font-size: 36px;
   font-family: 'Teko', sans-serif;
   border-bottom: 1px solid black;
 }
 
 #last-name {
   color: grey;
+}
+
+#role {
+  margin-left: 20px;
+  font-size: 14px;
 }
 
 #nav-links {
@@ -75,7 +81,7 @@ a:hover {
   width: 90%;
   height: 400px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 200px;
   color: white;
 }
 
@@ -91,4 +97,21 @@ a:hover {
 .content {
   width: 40%;
   text-align: center;
+}
+
+#contact a {
+  color: white;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: black;
+}
+
+.fa-linkedin {
+  margin-left: 40px;
+}
+
+.fa-google {
+  margin-left: 40px
 }
