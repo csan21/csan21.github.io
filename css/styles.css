@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -17,8 +17,26 @@ body {
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 100;
+  text-shadow: 1px 1px black;
+}
+
+.emphasis {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #EF3F28;
+  text-shadow: 1px 1px black;
+}
+
+.contact-me {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #EF3F28;
+  text-shadow: 1px 1px black;
+  margin-bottom: 50px;
 }
 
 h3 {
@@ -34,6 +52,7 @@ h4 {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
+  text-shadow: 1px 1px black;
 }
 
 #navbar {
@@ -103,11 +122,13 @@ a:hover {
   width: 90%;
   height: 400px;
   margin: 0 auto;
-  padding-top: 200px;
+  padding-top: 100px;
   color: white;
 }
 
 .about-me {
+  margin-top: 10%;
+  margin-bottom: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,17 +142,28 @@ a:hover {
 }
 
 #project {
+  margin-top: 10%;
   border-radius: 50%;
   width: 50px;
   height: 50px;
 }
 
 .bio {
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .project-info {
   text-shadow: 1px 1px 2px black;
+}
+
+.logo-space a {
+  margin-top: 1%;
+  color: white;
+  opacity: .3;
+}
+
+.logo-space a:hover {
+  color: #EF3F28
 }
 
 .container {
@@ -148,6 +180,10 @@ a:hover {
   text-align: center;
 }
 
+#contact {
+  margin-top: 10%;
+}
+
 #contact a {
   color: white;
   text-decoration: none;
@@ -161,12 +197,16 @@ a:hover {
   margin-left: 40px;
 }
 
-.fa-google {
+.fa-instagram {
   margin-left: 40px;
 }
 
+.fa-google {
+  margin-top: 10px;
+}
+
 .line-break {
-  width: 200px;
+  width: 300px;
   border-bottom: 1px solid white;
   margin-top: 10px;
   opacity: 0.3;
