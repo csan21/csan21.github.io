@@ -6,12 +6,34 @@ html {
   background-size: cover;
 }
 
-body, p {
+body {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-shadow: 1px 1px black;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 #navbar {
@@ -37,7 +59,7 @@ body, p {
 }
 
 #last-name {
-  color: grey;
+  color: #EF3F28;
 }
 
 #role {
@@ -69,12 +91,12 @@ a {
 }
 
 a.active {
-  color: grey;
-  border-bottom: 1px dotted grey;
+  color: #EF3F28;
+  border-bottom: 1px dotted #EF3F28;
 }
 
 a:hover {
-  color: grey;
+  color: #EF3F28;
 }
 
 #main {
@@ -83,6 +105,33 @@ a:hover {
   margin: 0 auto;
   padding-top: 200px;
   color: white;
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+#project {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.bio {
+  margin-top: 10%;
+}
+
+.project-info {
+  text-shadow: 1px 1px 2px black;
 }
 
 .container {
@@ -113,5 +162,13 @@ a:hover {
 }
 
 .fa-google {
-  margin-left: 40px
+  margin-left: 40px;
+}
+
+.line-break {
+  width: 200px;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+  opacity: 0.3;
+  margin: 0 auto;
 }
