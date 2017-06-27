@@ -26,7 +26,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #EF3F28;
+  color: #FF5C5C;
   text-shadow: 1px 1px black;
 }
 
@@ -34,7 +34,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #EF3F28;
+  color: #FF5C5C;
   text-shadow: 1px 1px black;
   margin-bottom: 50px;
 }
@@ -78,7 +78,7 @@ h4 {
 }
 
 #last-name {
-  color: #EF3F28;
+  color: #FF5C5C;
 }
 
 #role {
@@ -110,12 +110,12 @@ a {
 }
 
 a.active {
-  color: #EF3F28;
-  border-bottom: 1px dotted #EF3F28;
+  color: #FF5C5C;
+  border-bottom: 1px dotted #FF5C5C;
 }
 
 a:hover {
-  color: #EF3F28;
+  color: #FF5C5C;
 }
 
 #main {
@@ -142,7 +142,7 @@ a:hover {
 }
 
 #project {
-  margin-top: 5%;
+  margin-top: 10%;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -156,14 +156,14 @@ a:hover {
   text-shadow: 1px 1px 2px black;
 }
 
-.logo-space a {
+.lospace a {
   margin-top: 1%;
   color: white;
   opacity: .3;
 }
 
-.logo-space a:hover {
-  color: #EF3F28
+.space a:hover {
+  color: #FF5C5C
 }
 
 .container {
@@ -206,7 +206,7 @@ a:hover {
 }
 
 .line-break {
-  width: 400px;
+  width: 300px;
   border-bottom: 1px solid white;
   margin-top: 10px;
   opacity: 0.3;
