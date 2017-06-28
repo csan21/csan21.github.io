@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -17,14 +17,14 @@ body {
 
 p {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 100;
   text-shadow: 1px 1px black;
 }
 
 .emphasis {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   color: #FF5C5C;
   text-shadow: 1px 1px black;
@@ -32,7 +32,7 @@ p {
 
 .contact-me {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: #FF5C5C;
   text-shadow: 1px 1px black;
@@ -50,6 +50,7 @@ h3 {
 
 h4 {
   font-family: 'Roboto', sans-serif;
+  font-style: italic;
   font-size: 16px;
   font-weight: 300;
   text-shadow: 1px 1px black;
@@ -83,7 +84,7 @@ h4 {
 
 #role {
   margin-left: 20px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #nav-links {
@@ -105,7 +106,7 @@ h4 {
 
 a {
   color: #000000;
-  font-size: 14px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -154,15 +155,18 @@ a:hover {
 }
 
 .bio {
-  margin-top: 3%;
+  margin-top: -1%;
 }
 
 .project-info {
-  text-shadow: 1px 1px 2px black;
+  margin-top: -1%;
+}
+
+.logo-space {
+  margin-top: -1%;
 }
 
 .logo-space a {
-  margin-top: 1%;
   color: white;
   opacity: .3;
 }
@@ -213,7 +217,7 @@ a:hover {
 }
 
 .line-break {
-  width: 300px;
+  width: 500px;
   border-bottom: 1px solid white;
   margin-top: 10px;
   opacity: 0.3;
