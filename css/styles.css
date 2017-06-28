@@ -1,5 +1,5 @@
 html {
-  background: url(../img/desk.jpeg) no-repeat center center fixed;
+  background: url(../img/desk.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -142,14 +142,19 @@ a:hover {
 }
 
 #project {
-  margin-top: 5%;
+  margin-top: 3%;
   border-radius: 50%;
   width: 50px;
   height: 50px;
 }
 
+#projects {
+  margin-top: 5%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .bio {
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 .project-info {
@@ -167,6 +172,8 @@ a:hover {
 }
 
 .container {
+  max-width: 95%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
@@ -176,7 +183,7 @@ a:hover {
 }
 
 .content {
-  width: 40%;
+  width: 45%;
   text-align: center;
 }
 
