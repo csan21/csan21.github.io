@@ -32,7 +32,7 @@ p {
 
 .emphasis-bold {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #FF5C5C;
   text-shadow: 1px 1px black;
@@ -161,6 +161,11 @@ a:hover {
   max-width: 80%;
   margin-top: 5%;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.line {
+  color: white;
+  font-weight: 100;
 }
 
 .bio {
