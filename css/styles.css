@@ -30,6 +30,14 @@ p {
   text-shadow: 1px 1px black;
 }
 
+.emphasis-bold {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FF5C5C;
+  text-shadow: 1px 1px black;
+}
+
 .contact-me {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -70,7 +78,7 @@ h4 {
   width: 960px;
 }
 
-#name {
+#first-name {
   margin-top: 20px;
   display: inline-block;
   font-size: 36px;
@@ -135,14 +143,14 @@ a:hover {
   justify-content: center;
 }
 
-#photo {
+#my-photo {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   margin-right: 20px;
 }
 
-#project {
+.project-photo {
   margin-top: 3%;
   border-radius: 50%;
   width: 50px;
