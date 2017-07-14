@@ -26,7 +26,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 300;
-  color: #FF5C5C;
+  color: #ff5c5c;
   text-shadow: 1px 1px black;
 }
 
@@ -34,7 +34,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #FF5C5C;
+  color: #ff5c5c;
   text-shadow: 1px 1px black;
 }
 
@@ -42,7 +42,7 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-weight: 300;
-  color: #FF5C5C;
+  color: #ff5c5c;
   text-shadow: 1px 1px black;
   margin-bottom: 50px;
 }
@@ -87,7 +87,7 @@ h4 {
 }
 
 #last-name {
-  color: #FF5C5C;
+  color: #ff5c5c;
 }
 
 #role {
@@ -119,12 +119,12 @@ a {
 }
 
 a.active {
-  color: #FF5C5C;
-  border-bottom: 1px dotted #FF5C5C;
+  color: #ff5c5c;
+  border-bottom: 1px dotted #ff5c5c;
 }
 
 a:hover {
-  color: #FF5C5C;
+  color: #ff5c5c;
 }
 
 #main {
@@ -163,6 +163,16 @@ a:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
+#skills {
+  max-width: 80%;
+  margin-top: 5%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#skills h3 {
+  margin-top: 3%;
+}
+
 .line {
   color: white;
   font-weight: 100;
@@ -186,7 +196,7 @@ a:hover {
 }
 
 .logo-space a:hover {
-  color: #FF5C5C
+  color: #ff5c5c;
 }
 
 .container {
@@ -196,7 +206,10 @@ a:hover {
   justify-content: space-around;
 }
 
-#about, #projects, #contact {
+#about,
+#projects,
+#skills,
+#contact {
   display: hidden;
 }
 
