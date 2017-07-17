@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#projects").hide()
+  $("#skills").hide()
   $("#contact").hide()
   $("#about").show()
 
