@@ -128,14 +128,22 @@ a:hover {
 }
 
 #main {
-  width: 90%;
+  width: 100%;
   height: 400px;
   margin: 0 auto;
   padding-top: 100px;
   color: white;
 }
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
 .about-me {
+  width: 100%;
   margin-top: 10%;
   margin-bottom: 2%;
   display: flex;
@@ -158,13 +166,13 @@ a:hover {
 }
 
 #projects {
-  max-width: 80%;
+  width: 80%;
   margin-top: 5%;
   background: rgba(0, 0, 0, 0.5);
 }
 
 #skills {
-  max-width: 80%;
+  width: 80%;
   margin-top: 5%;
   background: rgba(0, 0, 0, 0.5);
 }
@@ -197,13 +205,6 @@ a:hover {
 
 .logo-space a:hover {
   color: #ff5c5c;
-}
-
-.container {
-  max-width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
 }
 
 #about,
