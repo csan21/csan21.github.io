@@ -4,43 +4,39 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
   margin: 0 auto;
   width: 100%;
   height: 100%;
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: 100;
+  font-size: 16px;
+  font-weight: 200;
   text-shadow: 1px 1px black;
 }
 
 .emphasis {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   color: #ff5c5c;
   text-shadow: 1px 1px black;
 }
 
 .emphasis-bold {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   color: #ff5c5c;
   text-shadow: 1px 1px black;
 }
 
 .contact-me {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   color: #ff5c5c;
   text-shadow: 1px 1px black;
@@ -50,14 +46,12 @@ p {
 h3 {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
   text-shadow: 1px 1px black;
 }
 
 h4 {
-  font-family: 'Roboto', sans-serif;
   font-style: italic;
   font-size: 16px;
   font-weight: 300;
@@ -180,22 +174,20 @@ a:hover {
 
 #skills h3 {
   margin-top: 3%;
-  font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 200;
   color: #ff5c5c;
 }
 
-#skill .thin {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 100;
+#skills .thin {
+  font-size: 16px;
+  font-weight: 200;
   color: #fff;
 }
 
 .line {
   color: white;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .bio {
@@ -275,5 +267,5 @@ a:hover {
   position: fixed;
   text-align: center;
   font-size: 12px;
-  font-weight: 100;
+  font-weight: 200;
 }
