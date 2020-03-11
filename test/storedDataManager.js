@@ -124,6 +124,11 @@ function createIDB() {
 
     request.onsuccess = function(event) {
         db = event.target.result;
+
+        // uncomment below to write the sso token to indexedDB
+        writeSSO(db, 'foo-bar-1234');
+        // uncomment below to read the sso token to indexedDB
+        // readSSO(db);
     };
 
 }
@@ -182,7 +187,9 @@ let $button = document.createElement("BUTTON");
 $button.setAttribute('id', 'mybutton');
 $button.innerHTML = 'request dat access!';
 document.body.appendChild($button);
-document.getElementById('mybutton').addEventListener('click', createIDB);
+// document.getElementById('mybutton').addEventListener('click', createIDB);
+
+createIDB();
 
 
 
