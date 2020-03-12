@@ -131,12 +131,13 @@
         var check = store.openCursor(1);
 
         check.onsuccess = function(event) {
-            var exists = event.target.result;
+            var exists = check.result;
+
             if (!exists) {
                 store.add(token);
                 console.log('[IDB] sso token added');
             } else {
-                console.log('[IDB] sso token value exists');
+                console.log('[IDB] sso token value exists, no write necessary');
             }
         };
 
@@ -145,7 +146,7 @@
         };
 
         dbtrans.onerror = function(event) {
-            console.log('[IDB] error writing sso in the sso store =' + event.target.errorCode);
+            console.log('[IDB] error writing sso in the sso store =' + dbtrans.errorCode);
         };
     }
 
@@ -155,12 +156,12 @@
         var request = store.get(1);
 
         request.onsuccess = function(event) {
-            var ssotoken = event.target.result;
-            console.log('[IDB] readSSO: ssotoken = ', ssotoken);
+            var ssotoken = request.result;
+            console.log('[IDB] readSSO: ssotoken = ', ssotoken.token);
         };
 
         request.onerror = function(event) {
-            console.log('error calling get to retrieve ssotoken =' + event.target.errorCode);
+            console.log('[IDB] error calling get to retrieve ssotoken =' + request.errorCode);
         };
     }
 
@@ -168,14 +169,14 @@
         var db;
 
         if (!('indexedDB' in window)) {
-            console.log('This browser doesn\'t support IndexedDB');
+            console.log('[IDB] This browser doesn\'t support IndexedDB');
             return;
         }
 
         var request = indexedDB.open('testDB', 1);
 
         request.onupgradeneeded = function(event) {
-            db = event.target.result;
+            db = request.result;
             db.createObjectStore('ssotoken', { autoIncrement: true })
         };
 
@@ -184,7 +185,7 @@
         };
 
         request.onsuccess = function(event) {
-            db = event.target.result;
+            db = request.result;
             // uncomment below to write the sso token to indexedDB
             writeSSO(db, 'foo-bar-1234');
             // uncomment below to read the sso token to indexedDB
@@ -194,12 +195,11 @@
 
     // createIDB();
 
-    console.log('stored data manger adding button');
-    let $button = document.createElement("BUTTON");
-    $button.setAttribute('id', 'mybutton');
-    $button.innerHTML = 'create idb';
+    let $button = document.createElement('button');
+    $button.setAttribute('id', 'idb');
+    $button.innerHTML = 'create IndexedDB';
     document.body.appendChild($button);
-    document.getElementById('mybutton').addEventListener('click', createIDB);
+    document.getElementById('idb').addEventListener('click', createIDB);
 
     // window.close();
 </script>

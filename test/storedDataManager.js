@@ -1,6 +1,3 @@
-/* global postRobot */ // tell eslint that postRobot is globally defined
-/* global Cookies */ // tell eslint that Cookies is globally defined
-// console.log('[DEBUG] loading storedDataManager.js')
 console.log('[IDB]');
 
 function writeSSO(db, val) {
@@ -12,11 +9,12 @@ function writeSSO(db, val) {
 
     check.onsuccess = function(event) {
         var exists = check.result;
+
         if (!exists) {
             store.add(token);
             console.log('[IDB] sso token added');
         } else {
-            console.log('[IDB] sso token value exists');
+            console.log('[IDB] sso token value exists, no write necessary');
         }
     };
 
