@@ -2,74 +2,6 @@
 /* global Cookies */ // tell eslint that Cookies is globally defined
 // console.log('[DEBUG] loading storedDataManager.js')
 console.log('[DEBUG] postRobot loaded: ', postRobot);
-// var localStorageEnabled = false;
-
-// source: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
-// function storageAvailable(type) {
-//     var storage;
-//     var x;
-//     try {
-//         storage = window[type];
-//         x = '__storage_test__';
-//         storage.setItem(x, x);
-//         storage.removeItem(x);
-//         return true;
-//     } catch (e) {
-//         return e instanceof DOMException && (
-//             // everything except Firefox
-//             e.code === 22 ||
-//             // Firefox
-//             e.code === 1014 ||
-//             // test name field too, because code might not be present
-//             // everything except Firefox
-//             e.name === 'QuotaExceededError' ||
-//             // Firefox
-//             e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-//             // acknowledge QuotaExceededError only if there's something already stored
-//             storage.length !== 0;
-//     }
-// }
-//
-// if (storageAvailable('localStorage')) {
-//     localStorageEnabled = true;
-// }
-//
-// function setCookie(name, value, attributes) {
-//     Cookies.set(name, value, attributes);
-// }
-//
-// function setLocalStorage(name, value) {
-//     if (localStorageEnabled) {
-//         localStorage.setItem(name, value);
-//     }
-// }
-//
-// function getCookie(name) {
-//     return Cookies.get(name) || null;
-// }
-//
-// function getLocalStorage(name) {
-//     // if (localStorageEnabled) {
-//         return localStorage.getItem(name);
-//     // }
-//
-//     // return null;
-// }
-//
-// function clearCookie(name) {
-//     Cookies.remove(name);
-// }
-//
-// function clearLocalStorage(name) {
-//     if (localStorageEnabled) {
-//         localStorage.removeItem(name);
-//     }
-// }
-//
-// function checkStorageThenCookie(name) {
-//     console.log('[DEBUG] local storage value: ', getLocalStorage(name))
-//     return getLocalStorage(name) // || getCookie(name);
-// }
 
 function writeSSO(db, val) {
     var dbtrans = db.transaction(['ssotoken'], 'readwrite');
@@ -83,7 +15,7 @@ function writeSSO(db, val) {
     };
 
     dbtrans.onerror = function(event) {
-        console.log('error writting ssoEntry in the sso store =' + event.target.errorCode);
+        console.log('error writting sso to idb =' + event.target.errorCode);
     };
 }
 
@@ -91,7 +23,7 @@ function readSSO(db) {
     console.log('[readSSO]');
     var dbtrans = db.transaction(['ssotoken'], 'readwrite');
     var store = dbtrans.objectStore('ssotoken');
-    var request = store.get(1);
+    var request = store.get('ssotoken');
 
     request.onsuccess = function(event) {
         var ssotoken = event.target.result;
@@ -126,11 +58,10 @@ function createIDB() {
         db = event.target.result;
 
         // uncomment below to write the sso token to indexedDB
-        writeSSO(db, 'foo-bar-1234');
+        // writeSSO(db, 'foo-bar-1234');
         // uncomment below to read the sso token to indexedDB
-        // readSSO(db);
+        readSSO(db);
     };
-
 }
 
 postRobot.on('setData', function prSetData(event) {
@@ -159,7 +90,7 @@ postRobot.on('getData', function prGetData(event) {
     //     //         value: getCookie(event.data.name),
     //     //     };
     //     // }
-    //     console.log('[DEBUG]checking local storage in efodi.github.io storedData Manager: ', checkStorageThenCookie(event.data.name));
+        console.log('[DEBUG] postRobot.getData');
     //     return {
     //         value: checkStorageThenCookie(event.data.name),
     //     };
@@ -180,16 +111,14 @@ postRobot.on('clearData', function prClearData(event) {
     // throw new Error('name is required in all clearCookie calls');
 });
 
-
 console.log('stored data manger adding button');
 let $button = document.createElement("BUTTON");
-// $button.onClick = requestAccess;
 $button.setAttribute('id', 'mybutton');
-$button.innerHTML = 'request dat access!';
+$button.innerHTML = 'create idb';
 document.body.appendChild($button);
 // document.getElementById('mybutton').addEventListener('click', createIDB);
 
-createIDB();
+// createIDB();
 
 
 
