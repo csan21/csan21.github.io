@@ -71,15 +71,15 @@ function createIDB() {
         readSSO(db);
     };
 }
-
-createIDB();
+t
+// createIDB();
 
 console.log('stored data manger adding button');
 let $button = document.createElement("BUTTON");
 $button.setAttribute('id', 'mybutton');
 $button.innerHTML = 'create idb';
 document.body.appendChild($button);
-// document.getElementById('mybutton').addEventListener('click', createIDB);
+document.getElementById('mybutton').addEventListener('click', createIDB);
 
 
 
