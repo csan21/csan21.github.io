@@ -8,12 +8,20 @@ function writeSSO(db, val) {
     var store = dbtrans.objectStore('ssotoken');
     var token = { token: val, timestamp: Date.now() };
 
-    dbtrans.oncomplete = function() {
-        var request = store.add(token);
+    var check = store.openCursor(1);
 
-        request.onsuccess = function() {
-            console.log('sso token written to idb store');
-        };
+    check.onsuccess = function(event) {
+        var exists = event.target.result;
+        if (!exists) {
+            store.add(token);
+            console.log('sso token added');
+        } else {
+            console.log('sso token value exists');
+        }
+    };
+
+    dbtrans.oncomplete = function() {
+        console.log('write transaction complete')
     };
 
     dbtrans.onerror = function(event) {
