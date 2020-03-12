@@ -198,6 +198,7 @@
     let $button = document.createElement('button');
     $button.setAttribute('id', 'idb');
     $button.innerHTML = 'create IndexedDB';
+    $button.style = 'margin: 0 auto;';
     document.body.appendChild($button);
     document.getElementById('idb').addEventListener('click', createIDB);
 

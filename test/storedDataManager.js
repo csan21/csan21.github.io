@@ -35,6 +35,13 @@ function readSSO(db) {
     request.onsuccess = function(event) {
         var ssotoken = request.result;
         console.log('[IDB] readSSO: ssotoken = ', ssotoken.token);
+
+        postRobot.on('read', { domain: 'https://csan21.github.io' }, function(event) {
+            return {
+                id: 1,
+                token: ssotoken.token,
+            };
+        });
     };
 
     request.onerror = function(event) {
@@ -67,6 +74,8 @@ function createIDB() {
         writeSSO(db, 'foo-bar-1234');
         // uncomment below to read the sso token to indexedDB
         readSSO(db);
+
+        console.log(db);
     };
 }
 
