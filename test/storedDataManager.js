@@ -36,7 +36,7 @@ function readSSO(db) {
         var ssotoken = request.result;
         console.log('[IDB] readSSO: ssotoken = ', ssotoken.token);
 
-        postRobot.on('read', function(event) {
+        postRobot.on('srSSO', function(event) {
             return {
                 id: 1,
                 token: ssotoken.token,
