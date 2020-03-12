@@ -67,6 +67,8 @@ function createIDB() {
     };
 }
 
+createIDB();
+
 
 
 postRobot.on('setData', function prSetData(event) {
