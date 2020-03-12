@@ -25,7 +25,8 @@ function readSSO(db) {
     console.log('[readSSO]');
     var dbtrans = db.transaction(['ssotoken'], 'readwrite');
     var store = dbtrans.objectStore('ssotoken');
-    var request = store.get('ssotoken');
+    var request = store.get(1);
+    window.store = store;
 
     request.onsuccess = function(event) {
         var ssotoken = event.target.result;
@@ -50,8 +51,6 @@ function createIDB() {
     request.onupgradeneeded = function(event) {
         db = event.target.result;
         db.createObjectStore('ssotoken', { autoIncrement: true });
-
-        readSSO(db);
     };
 
     request.onerror = function(event) {
@@ -64,6 +63,7 @@ function createIDB() {
         // uncomment below to write the sso token to indexedDB
         writeSSO(db, 'foo-bar-1234');
         // uncomment below to read the sso token to indexedDB
+        readSSO(db);
     };
 }
 
