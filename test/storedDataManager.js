@@ -60,9 +60,12 @@ function createIDB() {
         // uncomment below to write the sso token to indexedDB
         // writeSSO(db, 'foo-bar-1234');
         // uncomment below to read the sso token to indexedDB
-        readSSO(db);
     };
+
+    readSSO(db);
 }
+
+
 
 postRobot.on('setData', function prSetData(event) {
     // var daysToExpire = event.data.daysToExpire || 3650; // default to 10yr, like sso cookie
