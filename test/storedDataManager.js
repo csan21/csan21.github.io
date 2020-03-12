@@ -7,14 +7,14 @@ function writeSSO(db, val) {
     var dbtrans = db.transaction(['ssotoken'], 'readwrite');
     var store = dbtrans.objectStore('ssotoken');
     var token = { token: val, timestamp: Date.now() };
-    var log = store.get('ssotoken');
-    console.log(log);
 
-    store.add(token);
+    if (!store.get(1)) {
+        var request = store.add(token);
 
-    dbtrans.oncomplete = function() {
-        console.log('sso token written to idb store');
-    };
+        request.onsuccess = function(event) {
+            console.log('sso token written to idb store');
+        }
+    }
 
     dbtrans.onerror = function(event) {
         console.log('error writting sso to idb =' + event.target.errorCode);
@@ -22,11 +22,9 @@ function writeSSO(db, val) {
 }
 
 function readSSO(db) {
-    console.log('[readSSO]');
     var dbtrans = db.transaction(['ssotoken'], 'readwrite');
     var store = dbtrans.objectStore('ssotoken');
     var request = store.get(1);
-    window.store = store;
 
     request.onsuccess = function(event) {
         var ssotoken = event.target.result;
@@ -46,11 +44,11 @@ function createIDB() {
         return;
     }
 
-    var request = indexedDB.open('testDB', 1);
+    var request = indexedDB.open('SSOtesting', 1);
 
     request.onupgradeneeded = function(event) {
         db = event.target.result;
-        db.createObjectStore('ssotoken', { autoIncrement: true });
+        db.createObjectStore('ssotoken', { autoIncrement: false });
     };
 
     request.onerror = function(event) {
